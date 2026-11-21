@@ -1,0 +1,110 @@
+:root {
+  --teal: #5e9fab;        /* logo colour */
+  --teal-deep: #2c5963;   /* links */
+  --teal-pale: #e8f1f3;   /* soft backgrounds */
+  --ink: #000;
+  --paper: #fff;
+  --font: "Outfit", "Jost", "Century Gothic", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+}
+a { color: var(--teal-deep); text-underline-offset: 0.2em; }
+a:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+
+/* ---------- Header ---------- */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--teal);
+}
+.top a { color: var(--ink); text-decoration: none; }
+.top .home { font-weight: 400; letter-spacing: 0.04em; }
+.top nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.top nav a:hover { text-decoration: underline; }
+
+/* ---------- Banner photo + logo ---------- */
+.banner { position: relative; margin-bottom: 0; }
+.banner > img {
+  display: block;
+  width: 100%;
+  height: clamp(12rem, 38vw, 28rem);
+  object-fit: cover;
+  object-position: center;
+}
+
+.logo {
+  display: block;
+  width: clamp(9rem, 26vw, 15rem);
+  margin: calc(clamp(9rem, 26vw, 15rem) / -2) auto 0;
+  position: relative;
+}
+.logo img { display: block; width: 100%; height: auto; border-radius: 0; }
+
+/* ---------- Sections ---------- */
+main > section:not(.banner) {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 0.5rem;
+}
+h2 {
+  margin: 0 0 1rem;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+section img { max-width: 100%; height: auto; border-radius: 0.5rem; }
+
+/* Concerts */
+.konzerte { list-style: none; margin: 0; padding: 0; }
+.konzerte li {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 0.25rem 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--teal);
+}
+.konzerte li:last-child { border-bottom: 1px solid var(--teal); }
+.konzerte time { color: var(--teal-deep); font-weight: 400; }
+.konzerte strong { display: block; font-weight: 400; }
+.konzerte span { color: #444; }
+.note { margin-top: 1rem; font-size: 0.95rem; color: #555; }
+
+.video { aspect-ratio: 16 / 9; }
+.video iframe { width: 100%; height: 100%; border: 0; border-radius: 0.5rem; }
+
+/* ---------- Footer ---------- */
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  margin-top: 4rem;
+  padding: 1.5rem;
+  background: var(--teal-pale);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 40rem) {
+  .concerts li { grid-template-columns: 1fr; }
+  .top nav { gap: 1rem; }
+}
+@media (min-width: 60rem) {
+  body { font-size: 1.25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
