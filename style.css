@@ -1,18 +1,4 @@
 @font-face {
-  font-family: "Jost";
-  src: url("fonts/Jost-Light.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("fonts/Jost-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Outfit";
   src: url("fonts/Outfit-Light.ttf") format("truetype");
   font-weight: 400;
@@ -23,6 +9,13 @@
   font-family: "Outfit";
   src: url("fonts/Outfit-Medium.ttf") format("truetype");
   font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-SemiBold.ttf") format("truetype");
+  font-weight: 600;
   font-display: swap;
 }
 
@@ -60,7 +53,7 @@ a:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
   background: var(--teal);
 }
 .top a { color: var(--ink); text-decoration: none; }
-.top .home { font-weight: 400; letter-spacing: 0.04em; }
+.top .home { font-weight: 600; letter-spacing: 0.04em; }
 .top nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
 .top nav a:hover { text-decoration: underline; }
 
@@ -127,7 +120,7 @@ footer {
 }
 
 @media (max-width: 40rem) {
-  .concerts li { grid-template-columns: 1fr; }
+  .konzerte li { grid-template-columns: 1fr; }
   .top nav { gap: 1rem; }
 }
 @media (min-width: 60rem) {
