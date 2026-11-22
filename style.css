@@ -1,10 +1,38 @@
+@font-face {
+  font-family: "Jost";
+  src: url("fonts/Jost-Light.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("fonts/Jost-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Light.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
 :root {
   --teal: #5e9fab;        /* logo colour */
   --teal-deep: #2c5963;   /* links */
   --teal-pale: #e8f1f3;   /* soft backgrounds */
   --ink: #000;
   --paper: #fff;
-  --font: "Outfit", "Jost", "Century Gothic", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font: "Avenir Next", "Outfit", system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -12,7 +40,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: var(--font);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.65;
   color: var(--ink);
@@ -62,7 +90,7 @@ main > section:not(.banner) {
 }
 h2 {
   margin: 0 0 1rem;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.75rem;
   line-height: 1.2;
 }
